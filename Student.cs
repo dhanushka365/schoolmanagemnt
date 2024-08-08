@@ -19,4 +19,10 @@ public class Student
 
     // Navigation property for the related StudentAddress
     public StudentAddress Address { get; set; }
+
+
+
+
+      public int GradeId { get; set; }
+      public Grade Grade { get; set; }
 }
