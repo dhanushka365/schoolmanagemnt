@@ -26,3 +26,8 @@ Course:
 Has a many-to-many relationship with Student.
 Has a many-to-one relationship with Teacher.
 
+
+# digram
+
+![schmgmnt drawio](https://github.com/user-attachments/assets/c2847a4c-a80c-49eb-a9c7-ec0882fc7950)
+
