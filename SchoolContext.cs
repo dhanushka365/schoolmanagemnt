@@ -5,7 +5,7 @@ public class SchoolContext : DbContext
     public DbSet<Student> Students { get; set; }
     public DbSet<Teacher> Teachers { get; set; }
     public DbSet<Course> Courses { get; set; }
-
+    public DbSet<StudentAddress> StudentAddresses { get; set; }
     public SchoolContext(DbContextOptions<SchoolContext> options) : base(options)
     {
     }
@@ -26,5 +26,12 @@ public class SchoolContext : DbContext
             .HasOne(c => c.Teacher)
             .WithMany(t => t.Courses)
             .HasForeignKey(c => c.TeacherId);
+
+
+            // Student-StudentAddress one-to-one relationship
+        modelBuilder.Entity<Student>()
+            .HasOne(s => s.Address)
+            .WithOne(a => a.Student)
+            .HasForeignKey<StudentAddress>(a => a.StudentId);
     }
 }

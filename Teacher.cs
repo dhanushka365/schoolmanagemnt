@@ -7,5 +7,8 @@ public class Teacher
     public string Address { get; set; }
     public string PhoneNumber { get; set; }
 
+
+  //-----------------many cardinality--------------
     public ICollection<Course> Courses { get; set; }
+  //-----------------many cardinality--------------
 }
