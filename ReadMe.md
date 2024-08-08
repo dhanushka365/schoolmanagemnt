@@ -6,6 +6,7 @@ Student:
 Has a one-to-one relationship with StudentAddress.
 Has a many-to-many relationship with Course.
 
+![Uploading manytomany-db-diagram.png…]()
 
 
 StudentAddress:
